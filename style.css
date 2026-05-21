@@ -1,0 +1,606 @@
+/* ==========================================================================
+   PINCHKIT - NEO-BRUTALIST DESIGN SYSTEM
+   ========================================================================== */
+
+:root {
+  --bg-cream: #FFFCE1;
+  --text-black: #000000;
+  --accent-terracotta: #C85A32;
+  --accent-ochre: #D99B26;
+  --accent-sage: #708272;
+  --accent-bright: #FF006E; /* Neo-brutalist pop */
+  --card-shadow: 4px 4px 0 #000000;
+  --border-thick: 3px solid #000000;
+  
+  --font-heading: 'Space Mono', monospace;
+  --font-body: 'Work Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-cream);
+  color: var(--text-black);
+  font-family: var(--font-body);
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Base Typography */
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  border-bottom: var(--border-thick);
+  background-color: #FFF;
+}
+
+.logo-text {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.75rem;
+  letter-spacing: -1px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-links a {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: opacity 0.15s ease;
+}
+
+.nav-links a:hover {
+  color: var(--accent-terracotta);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  text-transform: uppercase;
+  border: var(--border-thick);
+  cursor: pointer;
+  border-radius: 0;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 #000;
+}
+
+.btn-primary {
+  background-color: var(--accent-terracotta);
+  color: #FFF;
+}
+
+.btn-secondary {
+  background-color: var(--accent-ochre);
+  color: #000;
+}
+
+.btn-accent {
+  background-color: var(--accent-bright);
+  color: #FFF;
+}
+
+.btn-nav {
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  background-color: #000;
+  color: #FFF;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+/* Sections */
+section {
+  padding: 5rem 2rem;
+  border-bottom: var(--border-thick);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.section-desc {
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+/* Hero Section */
+.hero-section {
+  padding: 0;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  min-height: 85vh;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem;
+  border-right: var(--border-thick);
+}
+
+.badge {
+  display: inline-block;
+  align-self: flex-start;
+  background-color: var(--accent-ochre);
+  color: #000;
+  border: var(--border-thick);
+  padding: 0.25rem 0.75rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-title {
+  font-size: 4rem;
+  line-height: 1.05;
+  margin-bottom: 1.5rem;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  max-width: 550px;
+}
+
+.hero-cta-box {
+  margin-bottom: 3rem;
+}
+
+.value-strip {
+  display: flex;
+  gap: 1.5rem;
+  border-top: var(--border-thick);
+  padding-top: 1.5rem;
+}
+
+.strip-item {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.85rem;
+  border: var(--border-thick);
+  padding: 0.4rem 0.8rem;
+  background-color: #FFF;
+}
+
+.hero-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFF;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Comparison Section */
+.comparison-section {
+  background-color: #FFF;
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.card {
+  border: var(--border-thick);
+  box-shadow: var(--card-shadow);
+  background-color: #FFF;
+}
+
+.card-header {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 1rem;
+  border-bottom: var(--border-thick);
+  color: #FFF;
+}
+
+.card-bad .card-header {
+  background-color: #333333;
+}
+
+.card-good .card-header {
+  background-color: var(--accent-terracotta);
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+.comparison-list {
+  list-style: none;
+}
+
+.comparison-list li {
+  font-size: 1.1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #CCC;
+}
+
+.comparison-list li:last-child {
+  border-bottom: none;
+}
+
+.card-footer-price {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: var(--border-thick);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+/* Three Sachet System Section */
+.steps-section {
+  background-color: #FFF;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.step-card {
+  border: var(--border-thick);
+  padding: 3rem 2rem;
+  background-color: var(--bg-cream);
+  box-shadow: var(--card-shadow);
+}
+
+.step-number {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--accent-terracotta);
+  margin-bottom: 1rem;
+}
+
+.step-title {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.step-body {
+  font-size: 0.95rem;
+}
+
+/* Our Kits Menu Section */
+.menu-section {
+  background-color: #FFF;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.menu-card {
+  border: var(--border-thick);
+  box-shadow: var(--card-shadow);
+  background-color: #FFF;
+}
+
+.menu-badge {
+  background-color: #000;
+  color: #FFF;
+  padding: 0.75rem 1.5rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-bottom: var(--border-thick);
+}
+
+.menu-body {
+  padding: 2rem;
+}
+
+.menu-text {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  min-height: 80px;
+}
+
+.menu-meta {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--accent-terracotta);
+}
+
+/* Pricing Section */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.price-card {
+  border: var(--border-thick);
+  box-shadow: var(--card-shadow);
+  background-color: #FFF;
+  padding: 3rem 2rem;
+  position: relative;
+}
+
+.price-card.price-featured {
+  background-color: var(--bg-cream);
+  transform: scale(1.03);
+}
+
+.featured-badge {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--accent-bright);
+  color: #FFF;
+  border: var(--border-thick);
+  padding: 0.25rem 0.75rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.price-tier {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.price-value {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.price-period {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.price-note {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 2rem;
+  min-height: 45px;
+}
+
+.price-divider {
+  border: none;
+  border-top: var(--border-thick);
+  margin-bottom: 2rem;
+}
+
+.price-features {
+  list-style: none;
+  margin-bottom: 2.5rem;
+}
+
+.price-features li {
+  padding: 0.5rem 0;
+  font-size: 0.95rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.price-features li::before {
+  content: "■";
+  position: absolute;
+  left: 0;
+  color: var(--accent-terracotta);
+}
+
+/* Waitlist/Newsletter Block */
+.waitlist-section {
+  background-color: var(--accent-ochre);
+}
+
+.waitlist-card {
+  max-width: 800px;
+  margin: 0 auto;
+  border: var(--border-thick);
+  box-shadow: var(--card-shadow);
+  background-color: #FFF;
+  padding: 4rem;
+  text-align: center;
+}
+
+.waitlist-title {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.waitlist-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+}
+
+.waitlist-form {
+  margin-bottom: 2rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.input-field {
+  flex: 1;
+  border: var(--border-thick);
+  padding: 1rem;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  border-radius: 0;
+  background-color: var(--bg-cream);
+}
+
+.input-field:focus {
+  outline: none;
+  background-color: #FFF;
+}
+
+.form-message {
+  margin-top: 1rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+.form-message.success {
+  color: green;
+}
+
+.form-message.error {
+  color: red;
+}
+
+.launch-note {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--accent-terracotta);
+}
+
+/* Footer Style */
+.footer {
+  background-color: #000;
+  color: #FFF;
+  padding: 4rem 2rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto 3rem auto;
+}
+
+.footer-logo {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.footer-tagline {
+  color: #AAA;
+  max-width: 400px;
+}
+
+.font-mono {
+  font-family: var(--font-heading);
+}
+
+.footer-col h4 {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: var(--accent-ochre);
+}
+
+.footer-col p {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #AAA;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  padding-top: 2rem;
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  color: #777;
+}
+
+/* Responsive Overrides */
+@media (max-width: 968px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-content {
+    border-right: none;
+    border-bottom: var(--border-thick);
+    padding: 3rem 2rem;
+  }
+  
+  .hero-title {
+    font-size: 2.8rem;
+  }
+  
+  .comparison-grid, .steps-grid, .menu-grid, .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .price-card.price-featured {
+    transform: none;
+  }
+  
+  .form-row {
+    flex-direction: column;
+  }
+}
