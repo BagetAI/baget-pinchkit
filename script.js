@@ -9,6 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const emailInput = document.getElementById('email');
       const email = emailInput.value.trim();
+      
+      const preferredRecipeInput = document.getElementById('preferred_recipe');
+      const preferredRecipe = preferredRecipeInput ? preferredRecipeInput.value : 'Trio Pack';
 
       if (!email) {
         showMessage('Please enter a valid email address.', 'error');
@@ -28,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
           body: JSON.stringify({
             email: email,
             name: 'PinchKit Lead',
-            preferred_recipe: 'Trio Pack'
+            preferred_recipe: preferredRecipe
           }),
         });
 

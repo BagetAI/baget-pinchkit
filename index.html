@@ -197,12 +197,26 @@
     <section class="waitlist-section" id="waitlist-section">
       <div class="waitlist-card">
         <h2 class="waitlist-title">SECURE EARLY ACCESS TO PINCHKIT</h2>
-        <p class="waitlist-subtitle">We are currently running limited pilot batches with our FDA-certified co-packing partners. Join the waitlist today to lock in launch pricing and receive early priority access to our first batch in 2026.</p>
+        <p class="waitlist-subtitle">We are currently running limited pilot batches with our FDA-certified co-packing partners. Join the waitlist today to lock in launch pricing and choose your starting flavor priority.</p>
         
         <form id="waitlist-form" class="waitlist-form">
-          <div class="form-row">
-            <input type="email" id="email" placeholder="ENTER YOUR EMAIL" required class="input-field" />
-            <button type="submit" id="submit-btn" class="btn btn-accent">JOIN THE LIST</button>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="email" class="form-label">EMAIL ADDRESS</label>
+              <input type="email" id="email" placeholder="ENTER YOUR EMAIL" required class="input-field" />
+            </div>
+            <div class="form-group">
+              <label for="preferred_recipe" class="form-label">CHOOSE YOUR PREFERRED LAUNCH RECIPE</label>
+              <select id="preferred_recipe" class="input-field select-field" required>
+                <option value="Trio Pack">DEBUT WEEKnight TRIO (ALL 3 RECIPES)</option>
+                <option value="Thai Green Curry">THAI GREEN CURRY KIT</option>
+                <option value="Moroccan Tagine">MOROCCAN TAGINE KIT</option>
+                <option value="Szechuan Mapo Tofu">SZECHUAN MAPO TOFU KIT</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" id="submit-btn" class="btn btn-accent btn-block">JOIN THE PRIORITY LIST</button>
           </div>
           <p id="form-message" class="form-message"></p>
         </form>
