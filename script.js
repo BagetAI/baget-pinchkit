@@ -20,24 +20,25 @@ document.addEventListener('DOMContentLoaded', () => {
       submitButton.textContent = 'JOINING...';
 
       try {
-        const response = await fetch('https://app.baget.ai/api/leads', {
+        const response = await fetch('/api/waitlist', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({
-            companyId: '0c7363b2-4fe0-40cb-82bb-d4cffb902bd6',
             email: email,
-            name: 'PinchKit Lead'
+            name: 'PinchKit Lead',
+            preferred_recipe: 'Trio Pack'
           }),
         });
 
-        if (response.ok) {
+        const data = await response.json().catch(() => ({}));
+
+        if (response.ok && data.success) {
           showMessage('Success! You are on the priority waitlist.', 'success');
           form.reset();
         } else {
-          const errorData = await response.json().catch(() => ({}));
-          showMessage(errorData.message || 'Something went wrong. Please try again.', 'error');
+          showMessage(data.error || 'Something went wrong. Please try again.', 'error');
         }
       } catch (error) {
         console.error('Waitlist submission error:', error);

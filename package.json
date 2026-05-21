@@ -1,0 +1,12 @@
+{
+  "name": "baget-pinchkit",
+  "version": "1.0.0",
+  "description": "PinchKit launch landing page with database backend serverless endpoints",
+  "main": "index.html",
+  "dependencies": {
+    "pg": "^8.11.3"
+  },
+  "scripts": {
+    "start": "serve ."
+  }
+}
